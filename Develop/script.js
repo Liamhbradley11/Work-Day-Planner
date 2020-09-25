@@ -6,18 +6,21 @@ console.log(presentDay)
 document.getElementById("currentDay").append(presentDay);
 
 
-
-
-// moment().format("MMMM Do YYYY")
-// moment().format("LL");
-
-// console.log("hello");
-
 //add event listener to the save button
 $(".saveBtn").click(function(){
+    
+    
+    event.preventDefault();
     var value = ($(this).siblings(".desciption").val())
     var key = ($(this).parent().attr("id"))
+    localStorage.setItem(key, value);
+    
+    
     console.log(key, value);
     })
 
-    //
+
+
+
+
+   
